@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   def new
-    @restaurant = Restaurant.find(params[:restaurant_id])
+    @restaurant = Restaurant.find(params[:id])
     @review = Review.new
   end
 
@@ -13,6 +13,10 @@ class ReviewsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    new
   end
 
   private

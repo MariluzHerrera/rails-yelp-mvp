@@ -1,7 +1,16 @@
 <h1>List of restaurants</h1>
 
+<br>
+
+<ul>
 <% @restaurants.each do |r| %>
-  <h4><%= r.name %></h4>
+
+  <li><h3><strong><%= link_to r.name, restaurant_path(r) %></strong></h3>
   <h4><%= r.address %></h4>
-  <h4><%= r.category %></h4>
+  <h4><%= r.category %></h4></li>
 <% end %>
+</ul>
+
+<br>
+
+
